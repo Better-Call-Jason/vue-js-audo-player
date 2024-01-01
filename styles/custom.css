@@ -1,0 +1,50 @@
+
+[data-theme="dark"] {
+    --primary: #5e35b1;
+    --primary-hover: #673ab7;
+    --primary-focus: rgba(94, 53, 177, 0.25);
+    --primary-inverse: #FFF;
+}
+
+:root {
+    --form-element-active-border-color: var(--primary);
+    --form-element-focus-color: var(--primary-focus);
+    --switch-color: var(--primary-inverse);
+    --switch-checked-background-color: var(--primary);
+}
+
+.media-player-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25vh;
+}
+
+.grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.button-media {
+    margin: 5px;
+}
+
+/* Single column layout for the buttons on small screens */
+@media (max-width: 849px) {
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr; /* Single button across */
+        gap: 1em;
+    }
+}
+/* Three buttons across on larger screens */
+@media (min-width: 850px) {
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1em;
+    }
+}
+
+
